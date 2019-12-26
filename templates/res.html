@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>REHAN</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+
+</body>
+</html>><h1> CALCULATOR</h1>
+<form action ="add" method="post">
+	{% csrf_token %}
+	ENTER A NUMBER : <input type="text" name="num1"><br>
+	ENTER OPERATOR :  <input type="text" name="oper"><br>
+	ENTER A NUMBER : <input type="text" name="num2"><br>
+	<input type="submit">
+</form>
+{% for i in a1 %}
+<h1>{{i.name}}</h1>
+	<h1>{{i.comnts}}</h1>
+{% endfor %}
