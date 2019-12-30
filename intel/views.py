@@ -6,6 +6,7 @@ def home(request):
 	a = Comments.objects.all()
 	return render (request,'res.html',{'a1':a})
 
+# Basic calculator code
 def add(request):
 	num1 = int(request.POST["num1"])
 	oper = request.POST["oper"]
@@ -43,5 +44,6 @@ def comme(request):
 def pose(request):
 		name = request.POST.get("name")
 		comnts = request.POST.get("comment")
-		Comments.objects.create(name=name,comnts=comnts)
+		# stores the values in database
+		Comments.objects.create(name=name,comnts=comnts) 
 		return render(request,'aa.html')
